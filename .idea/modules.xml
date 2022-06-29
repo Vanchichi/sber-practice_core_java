@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Exception/Exception.iml" filepath="$PROJECT_DIR$/Exception/Exception.iml" />
       <module fileurl="file://$PROJECT_DIR$/base-syntax/base-syntax.iml" filepath="$PROJECT_DIR$/base-syntax/base-syntax.iml" />
       <module fileurl="file://$PROJECT_DIR$/opp1/opp1.iml" filepath="$PROJECT_DIR$/opp1/opp1.iml" />
       <module fileurl="file://$PROJECT_DIR$/opp2/opp2.iml" filepath="$PROJECT_DIR$/opp2/opp2.iml" />
