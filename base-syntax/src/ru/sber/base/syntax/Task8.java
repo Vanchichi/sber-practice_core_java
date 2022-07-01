@@ -21,7 +21,7 @@ public class Task8 {
                     System.out.println("Правильный ответ: троллейбус.");
                     break;
                 }
-                if (count < 3){
+                if (count < 3)
                     System.out.println("Подумай еще.");
                     count++;
                 }
