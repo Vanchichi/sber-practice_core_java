@@ -22,7 +22,7 @@ public class Task8 {
                     break;
                 }
                 if (count < 3){
-                    System.out.println("Подумай ещё.");
+                    System.out.println("Подумай еще.");
                     count++;
                 }
             }
