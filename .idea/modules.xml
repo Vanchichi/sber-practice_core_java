@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Exception/Exception.iml" filepath="$PROJECT_DIR$/Exception/Exception.iml" />
       <module fileurl="file://$PROJECT_DIR$/base-syntax/base-syntax.iml" filepath="$PROJECT_DIR$/base-syntax/base-syntax.iml" />
+      <module fileurl="file://$PROJECT_DIR$/collection1/collection1.iml" filepath="$PROJECT_DIR$/collection1/collection1.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaio/game/game.iml" filepath="$PROJECT_DIR$/javaio/game/game.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaio/javaio.iml" filepath="$PROJECT_DIR$/javaio/javaio.iml" />
       <module fileurl="file://$PROJECT_DIR$/opp1/opp1.iml" filepath="$PROJECT_DIR$/opp1/opp1.iml" />
