@@ -1,10 +1,10 @@
-public interface Deque extends Collection{
-    Object addFirst(Object item);
-    Object addLast(Object item);
-    Object getFirst();
-    Object getLast();
-    Object pollFirst();
-    Object pollLast();
-    Object removeFirst();
-    Object removeLast();
+public interface Deque<E> extends Collection<E> {
+    E addFirst(E item);
+    E addLast(E item);
+    E getFirst();
+    E getLast();
+    E pollFirst();
+    E pollLast();
+    E removeFirst();
+    E removeLast();
 }

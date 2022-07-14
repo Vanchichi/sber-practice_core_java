@@ -1,6 +1,7 @@
+import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public abstract class LinkedList implements List, Deque {
+public class LinkedList<E> implements List<E>, Deque<E> {
     private Node first;
     private Node last;
     private int size;
@@ -16,8 +17,14 @@ public abstract class LinkedList implements List, Deque {
             return false;
         }
     }
+
     @Override
-    public boolean contains(Object item) {
+    public boolean add() {
+        return false;
+    }
+
+    @Override
+    public boolean contains(E item) {
         Node node = first;
         while (node != null) {
             if (node.item.equals(item)) {
@@ -28,7 +35,7 @@ public abstract class LinkedList implements List, Deque {
         return false;
     }
     @Override
-    public boolean add(Object item) {
+    public boolean add(E item) {
         Node node = new Node();
         node.item = item;
 
@@ -43,7 +50,7 @@ public abstract class LinkedList implements List, Deque {
         return false;
     }
     @Override
-    public boolean remove(Object item) {
+    public boolean remove(E item) {
         Node node = first;
         boolean isDelete = false;
         while (node != null) {
@@ -68,7 +75,7 @@ public abstract class LinkedList implements List, Deque {
         size = 0;
     }
     @Override
-    public void add(int index, Object item) {
+    public void add(int index, E item) {
         Node node = new Node();
         node.item = item;
 
@@ -82,7 +89,7 @@ public abstract class LinkedList implements List, Deque {
         size++;
     }
     @Override
-    public void set(int index, Object item) {
+    public void set(int index, E item) {
         Node node = first;
         int i = 0;
         if (index == size){
@@ -109,7 +116,7 @@ public abstract class LinkedList implements List, Deque {
         return null;
     }
     @Override
-    public int indexOf(Object item) {
+    public int indexOf(E item) {
         int j = -1;
         int i=0;
         Node node = first;
@@ -125,7 +132,7 @@ public abstract class LinkedList implements List, Deque {
         return j;
     }
     @Override
-    public int lastIndexOf(Object item) {
+    public int lastIndexOf(E item) {
         int j = -1;
         int i=0;
         Node node = first;
@@ -139,8 +146,8 @@ public abstract class LinkedList implements List, Deque {
         return j;
     }
     @Override
-    public Object remove(int index) throws IndexOutOfBoundsException{
-        Object copyN;
+    public E remove(int index) throws IndexOutOfBoundsException{
+        E copyN;
         Node node = first;
         int i = 0;
         while (i <= index) {
@@ -160,44 +167,49 @@ public abstract class LinkedList implements List, Deque {
         return null;
     }
     @Override
-    public Object addFirst(Object item) {
+    public E addFirst(Object item) {
         add();
         return null;
     }
     @Override
-    public Object addLast(Object item) {
+    public E addLast(Object item) {
         Node node = last;
         return null;
     }
     @Override
-    public Object getFirst() throws NoSuchElementException {
+    public E getFirst() throws NoSuchElementException {
         return first.item;
     }
     @Override
-    public Object getLast() throws NoSuchElementException{
+    public E getLast() throws NoSuchElementException{
         return last.item;
     }
     @Override
-    public Object pollFirst() {
+    public E pollFirst() {
         return null;
     }
     @Override
-    public Object pollLast() {
+    public E pollLast() {
         return null;
     }
     @Override
-    public Object removeFirst() throws NoSuchElementException{
+    public E removeFirst() throws NoSuchElementException{
         return null;
     }
     @Override
-    public Object removeLast() throws NoSuchElementException{
+    public E removeLast() throws NoSuchElementException{
         return null;
     }
-    class Node {
-        Object item;
-        Node next;
-        Node prev;
+
+    @Override
+    public Iterator<E> iterator() {
+        return null;
     }
+        class Node {
+            E item;
+            Node next;
+            Node prev;
+        }
     public String toString(){
         StringBuilder res = new StringBuilder();
         Node node = first;

@@ -1,9 +1,9 @@
 import java.lang.Iterable;
-public interface Collection extends Iterable{
+public interface Collection<E> extends Iterable<E>{
     int size();
     boolean isEmpty();
-    boolean contains(Object item);
+    boolean contains(E item);
     boolean add();
-    boolean remove(Object item);
+    boolean remove(E item);
     void clear();
 }

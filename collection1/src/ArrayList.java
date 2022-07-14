@@ -1,6 +1,7 @@
 import java.util.Arrays;
+import java.util.Iterator;
 
-public class ArrayList implements List{
+public class ArrayList<E> implements List<E> {
     int size;
     int capacity = 10;
     Object[] arr = new Object[size];
@@ -18,7 +19,7 @@ public class ArrayList implements List{
     }
 
     @Override
-    public boolean contains(Object item) {
+    public boolean contains(E item) {
         boolean isMatch = false;
         for (int i = 0; i < size; i++) {
             if (arr[i].equals(item)) {
@@ -34,7 +35,7 @@ public class ArrayList implements List{
     }
 
     @Override
-    public boolean add(Object item) {
+    public boolean add(E item) {
         if (size >= capacity){
             capacity = (capacity*3)/2 + 1;
             Object[] newArr = new Object[capacity];
@@ -49,7 +50,7 @@ public class ArrayList implements List{
     }
 
     @Override
-    public void add(int index, Object item) {
+    public void add(int index, E item) {
         if (size >= capacity){
             capacity = (capacity*3)/2 + 1;
             Object[] newArr = new Object[capacity];
@@ -69,7 +70,7 @@ public class ArrayList implements List{
     }
 
     @Override
-    public boolean remove(Object item) {
+    public boolean remove(E item) {
         boolean isDelete = false;
         for (int i = 0; i < size; i++) {
             if (arr[i].equals(item)) {
@@ -91,7 +92,7 @@ public class ArrayList implements List{
 
 
     @Override
-    public void set(int index, Object item) {
+    public void set(int index, E item) {
         if (index == size){
             add();
         } else {
@@ -107,7 +108,7 @@ public class ArrayList implements List{
         return null;
     }
     @Override
-    public int indexOf(Object item) {
+    public int indexOf(E item) {
         int j = -1;
         boolean isFirst = false;
         for (int i = 0; i < size; i++){
@@ -119,7 +120,7 @@ public class ArrayList implements List{
         return j;
     }
     @Override
-    public int lastIndexOf(Object item) {
+    public int lastIndexOf(E item) {
         int j = -1;
         for (int i = 0; i < size; i++){
             if (arr[i].equals(item)){
@@ -154,5 +155,10 @@ public class ArrayList implements List{
     @Override
     public String toString() {
         return String.format("ArrayList{ arr=%s, capacity=%s, size=%s}" ,Arrays.toString(arr),capacity,size);
+    }
+
+    @Override
+    public Iterator<E> iterator() {
+        return null;
     }
 }

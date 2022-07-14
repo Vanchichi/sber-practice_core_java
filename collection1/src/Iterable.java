@@ -1,2 +1,2 @@
-public interface Iterable {
+public interface Iterable<E> {
 }
